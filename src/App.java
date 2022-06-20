@@ -14,7 +14,7 @@ public class App {
         LineNumberReader lineNumberReader = null;
 
         FileReader fileReader = new FileReader(fichier);
-        fileReader = new FileReader(fichier);
+
         lineNumberReader = new LineNumberReader(fileReader);
         ArrayList<String> liste = new ArrayList<String>();
 
