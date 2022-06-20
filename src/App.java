@@ -24,6 +24,15 @@ public class App {
             liste.add(ligneLue);
 
         }
+        try {
+            lineNumberReader.close();
+        } catch (IOException ioe) {
+            System.err.println("Impossible de fermer le fichier  ");
+
+        } catch (NullPointerException npe) {
+            System.err.println("Impossible d'ouvrir le fichier  ");
+
+        }
         System.out.println("La liste contient " + liste.size() + " éléments");
         ListIterator<String> li = liste.listIterator();
 
