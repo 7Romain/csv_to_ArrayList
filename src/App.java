@@ -21,7 +21,8 @@ public class App {
         String ligneLue = null;
         while ((ligneLue = lineNumberReader.readLine()) != null) {
 
-            liste.add(ligneLue);
+            String ligneLueNet = ligneLue.replaceAll(String.valueOf((char) 44), "  :  ");
+            liste.add(ligneLueNet);
 
         }
         try {
