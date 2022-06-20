@@ -6,7 +6,7 @@ import java.util.ListIterator;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Transform trans = new Transform();
+
         transform("C:/Users/Oziri/Documents/CDA/Projets Java/Tp_fx_webmail/src/adressesMails.csv");
     }
 
