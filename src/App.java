@@ -7,7 +7,12 @@ import java.util.ListIterator;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        transform("C:/Users/Oziri/Documents/CDA/Projets Java/Tp_fx_webmail/src/adressesMails.csv");
+        transform("C:/Users/7Romain/Documents/CDA/Projets Java/Tp_fx_webmail/src/adressesMails.csv"); /*
+                                                                                                       * <----- entrez
+                                                                                                       * ici le chemin
+                                                                                                       * de votre
+                                                                                                       * fichier csv
+                                                                                                       */
     }
 
     private static void transform(String fichier) throws IOException {
@@ -16,14 +21,19 @@ public class App {
         FileReader fileReader = new FileReader(fichier);
 
         lineNumberReader = new LineNumberReader(fileReader);
-        ArrayList<String> liste = new ArrayList<String>();
-
+        ArrayList<String> liste = new ArrayList<String>(); /* <----- Vous obtenez un ArrayList liste */
         String ligneLue = null;
         while ((ligneLue = lineNumberReader.readLine()) != null) {
 
-            String ligneLueNet = ligneLue.replaceAll(String.valueOf((char) 44), "  :  ");
-            liste.add(ligneLueNet);
-
+            String ligneLueNet = ligneLue.replaceAll(String.valueOf((char) 44), "  :  "); /*
+                                                                                           * <--- si le séparateur est
+                                                                                           * une virgule alt+44 en
+                                                                                           * ascii, je l'enlève et la
+                                                                                           * remplace.
+                                                                                           */
+            liste.add(ligneLueNet); /*
+                                     * <---- chaque ligne du csv = un élément.
+                                     */
         }
         try {
             lineNumberReader.close();
