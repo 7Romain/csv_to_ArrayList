@@ -7,7 +7,7 @@ import java.util.ListIterator;
 public class App {
     public static void main(String[] args) throws Exception {
         Transform trans = new Transform();
-        transform("C:/Users/7Romain/Documents/CDA/Projets Java/Tp_fx_webmail/src/adressesMails.csv");
+        transform("C:/Users/Oziri/Documents/CDA/Projets Java/Tp_fx_webmail/src/adressesMails.csv");
     }
 
     private static void transform(String fichier) throws IOException {
